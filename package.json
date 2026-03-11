@@ -1,0 +1,20 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/duchoangwork319/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/duchoangwork319/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duchoangwork319/portfolio.git"
+  },
+  "license": "ISC",
+  "author": "DucHoang",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
