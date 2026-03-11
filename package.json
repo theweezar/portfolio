@@ -2,13 +2,13 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/duchoangwork319/portfolio#readme",
+  "homepage": "https://github.com/theweezar/portfolio#readme",
   "bugs": {
-    "url": "https://github.com/duchoangwork319/portfolio/issues"
+    "url": "https://github.com/theweezar/portfolio/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/duchoangwork319/portfolio.git"
+    "url": "git+https://github.com/theweezar/portfolio.git"
   },
   "license": "ISC",
   "author": "DucHoang",
