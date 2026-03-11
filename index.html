@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./resumeicon.css">
+</head>
+<body>
+  <div id="root">
+    <div class="page" id="page"></div>
+  </div>
+
+  <script id="tpl-personal" type="text/x-handlebars-template">
+    <section class="personal" id="personal">
+      <div class="text-col">
+        <h1 class="rubik name">{{name}}</h1>
+        <h2 class="rubik position">{{position}}</h2>
+        <div class="inter contact contact-top">
+          {{#each contacts}}
+          <div>
+            <i class="icon {{icon}}"></i>
+            <span>
+              {{#if href}}
+                <a href="{{href}}" {{#if newTab}}target="_blank"{{/if}}>{{text}}</a>
+              {{else}}
+                {{text}}
+              {{/if}}
+            </span>
+          </div>
+          {{/each}}
+        </div>
+        <div class="inter contact">
+          {{#each meta}}
+          <div>
+            <i class="icon {{icon}}"></i>
+            <span>{{text}}</span>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      <div class="avatar-col"></div>
+    </section>
+  </script>
+
+  <script id="tpl-profile" type="text/x-handlebars-template">
+    <section class="profile" id="profile">
+      <div class="section-title rubik">PROFILE</div>
+      <div class="section-items inter">
+        <ul>
+          {{#each items}}
+          <li>
+            <p>{{{this}}}</p>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+  </script>
+
+  <script id="tpl-techSkills" type="text/x-handlebars-template">
+    <section class="tech-skills" id="techSkills">
+      <div class="section-title">TECHNICAL SKILLS</div>
+      <div class="section-items">
+        <ul>
+          {{#each items}}
+          <li>
+            <div>
+              <p class="label">{{label}}</p>
+              <p class="list">{{list}}</p>
+            </div>
+            {{#unless @last}}
+            <div class="divider"></div>
+            {{/unless}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+  </script>
+
+  <script id="tpl-experience" type="text/x-handlebars-template">
+    <section class="experience" id="experience">
+      <div class="section-title">EXPERIENCE</div>
+      {{#each items}}
+      <div class="exp-item {{#if noBreak}}no-break{{/if}}">
+        <div class="exp-role">{{role}}</div>
+        <div class="exp-company">{{company}}</div>
+        <div class="exp-row">
+          <div class="exp-time">
+            <span><img src="./icons/calendar.svg" alt=""></span>
+            <span>{{time}}</span>
+          </div>
+          <div class="exp-where">
+            <span><img src="./icons/location.svg" alt=""></span>
+            <span>{{location}}</span>
+          </div>
+        </div>
+        <div class="section-items">
+          <ul>
+            {{#each bullets}}
+            <li><p>{{{this}}}</p></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{#unless @last}}
+      <div class="divider"></div>
+      {{/unless}}
+      {{/each}}
+    </section>
+  </script>
+
+  <script id="tpl-achievements" type="text/x-handlebars-template">
+    <section class="achievements" id="achievements">
+      <div class="section-title">ACHIEVEMENTS</div>
+      <div class="row">
+        {{#each columns}}
+        <div class="col-6">
+          {{#each this}}
+          <div class="item">
+            <div class="icon-wrapper">
+              <i class="icon resume-icon-139-free-diamond-01"></i>
+            </div>
+            <div class="content">
+              <p class="label">{{label}}</p>
+              <p class="desc">{{desc}}</p>
+            </div>
+          </div>
+          {{#unless @last}}
+          <div class="divider"></div>
+          {{/unless}}
+          {{/each}}
+        </div>
+        {{/each}}
+      </div>
+    </section>
+  </script>
+
+  <script id="tpl-softSkills" type="text/x-handlebars-template">
+    <section class="tech-skills" id="softSkills">
+      <div class="section-title">SOFT SKILLS</div>
+      <div class="section-items">
+        <ul>
+          {{#each items}}
+          <li>
+            <div>
+              <p class="label">{{label}}</p>
+              <p class="list">{{list}}</p>
+            </div>
+            {{#unless @last}}
+            <div class="divider"></div>
+            {{/unless}}
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </section>
+  </script>
+
+  <script id="tpl-education" type="text/x-handlebars-template">
+    <section class="education" id="education">
+      <div class="section-title">EDUCATION</div>
+      <div class="section-items">
+        {{#each items}}
+        <div class="item">
+          <div class="major rubik">{{major}}</div>
+          <div class="where inter">{{school}}</div>
+          <div class="date">
+            <span><img src="./icons/calendar.svg" alt=""></span>
+            <span class="inter">{{date}}</span>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </section>
+  </script>
+
+  <script id="tpl-certifications" type="text/x-handlebars-template">
+    <section class="certifications" id="certifications">
+      <div class="section-title">CERTIFICATIONS</div>
+      <div class="section-items">
+        <div class="row">
+          {{#each items}}
+          <div class="col-6">
+            <div class="item">
+              <div class="name inter">
+                <a target="_blank" href="{{url}}">{{name}}</a>
+              </div>
+              <div class="company inter">{{company}}</div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+  </script>
+
+  <script id="tpl-projects" type="text/x-handlebars-template">
+    <section class="experience" id="projects">
+      <div class="section-title">Projects</div>
+      {{#each items}}
+      <div class="exp-item {{#if noBreak}}no-break{{/if}}">
+        <div class="exp-role">{{role}}</div>
+        <div class="exp-row">
+          <div class="exp-time">
+            <span><img src="./icons/calendar.svg" alt=""></span>
+            <span>{{time}}</span>
+          </div>
+          <div class="exp-where">
+            <span><img src="./icons/location.svg" alt=""></span>
+            <span>{{location}}</span>
+          </div>
+        </div>
+        {{#if url}}
+        <div class="exp-url">
+          <span><img src="./icons/link.svg" alt=""></span>
+          <span><a href="{{url}}" target="_blank">{{url}}</a></span>
+        </div>
+        {{/if}}
+        <div class="section-items">
+          {{#if listTitle}}<div class="list-title">{{listTitle}}</div>{{/if}}
+          <ul>
+            {{#each bullets}}
+            <li><p>{{{this}}}</p></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{#unless @last}}
+      <div class="divider"></div>
+      {{/unless}}
+      {{/each}}
+    </section>
+  </script>
+
+  <script src="./dist/main.js"></script>
+</body>
+</html>

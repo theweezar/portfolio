@@ -1,0 +1,19 @@
+Develop CV UI, following:
+Phase 1:
+- Read to understand HTML structure and style CSS.
+- There are 9 important sections: personal, profile, techSkills, experience, achievements, softSkills, education, certifications, projects.
+
+Phase 2:
+- Extract data of 9 sections into file. Data object needs to have exact 9 properties for 9 sections.
+- Separate 9 HTML sections and convert them to placeholder templates to be fed for handlebar compiler later.
+
+Phase 3:
+- Create JavaScript logic in  to handle import data from, then use handlebar library to compile each template, then push result into #root element.
+- Update : Add a script that uses esbuild to bundle into folder dist.
+
+Output:
+- New HTML goes to.
+- CSS goes to.
+- JS goes to.
+
+
