@@ -1,3 +1,4 @@
+"use strict";
 (() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
@@ -547,7 +548,7 @@
           return level;
         },
         // Can be overridden in the host environment
-        log: function log(level) {
+        log: function log2(level) {
           level = logger.lookupLevel(level);
           if (typeof console !== "undefined" && logger.lookupLevel(logger.level) <= level) {
             var method = logger.methodMap[level];
@@ -741,8 +742,8 @@
           _internalProtoAccess.resetLoggedProperties();
         }
       };
-      var log = _logger2["default"].log;
-      exports.log = log;
+      var log2 = _logger2["default"].log;
+      exports.log = log2;
       exports.createFrame = _utils.createFrame;
       exports.logger = _logger2["default"];
     }
@@ -5697,6 +5698,575 @@
 
   // main.js
   var import_handlebars = __toESM(require_handlebars(), 1);
+
+  // data.json
+  var data_default = {
+    personal: {
+      name: "HOANG PHAN MINH DUC",
+      position: "Full-Stack / Backend Developer | PHP, TypeScript, JavaScript, Node.js, SFCC",
+      contacts: [
+        {
+          icon: "resume-icon-42-free-call-phone",
+          text: "(+84) 935 723 714",
+          href: "tel:+84935723714"
+        },
+        {
+          icon: "resume-icon-email-01",
+          text: "hpmduc3010@gmail.com",
+          href: "mailto:hpmduc3010@gmail.com"
+        },
+        {
+          icon: "resume-icon-17-link",
+          text: "https://linkedin.com/in/duc-hoang-922172235/",
+          href: "https://linkedin.com/in/duc-hoang-922172235/",
+          newTab: true
+        }
+      ],
+      meta: [
+        {
+          icon: "resume-icon-40-free-calendar",
+          text: "30/10/1999"
+        },
+        {
+          icon: "resume-icon-location",
+          text: "Gia Dinh Ward, Ho Chi Minh, Vietnam"
+        }
+      ]
+    },
+    profile: {
+      items: [
+        "I'm a Full-Stack Developer with 5+ years of experience in the B2C e-commerce domain across the APAC region, skilled in <strong>TypeScript, JavaScript, Node.js, and PHP</strong>, with strong expertise in developing, maintaining online storefronts, and collaborating with cross-functional teams to design and deliver end-to-end solutions that align with business goals.",
+        "Currently, I'm actively seeking opportunities to grow as a <strong>Full-Stack / Backend Developer</strong> while contributing to the company's success and delivering high-quality solutions."
+      ]
+    },
+    techSkills: {
+      items: [
+        {
+          label: "Programming Languages",
+          list: "JavaScript, TypeScript, PHP, Java, Python, C++"
+        },
+        {
+          label: "Frameworks / Libraries",
+          list: "Laravel, WordPress, SFRA, SFRA Testing Packages (Mocha, Chai, Sinon, Istanbul), jQuery, Bootstrap, React.js, Next.js, Node.js, Express.js, Webpack, Babel, ESLint, Spring Boot"
+        },
+        {
+          label: "Databases",
+          list: "MySQL, MSSQL Server"
+        },
+        {
+          label: "Platforms",
+          list: "SFCC, Shopify, Emarsys, Google Analytics, Google Tag Manager, Google Cloud Console, Relate, Jenkins, GitHub, Bitbucket"
+        },
+        {
+          label: "Tools",
+          list: "Jira, Redmine, Git"
+        }
+      ]
+    },
+    experience: {
+      items: [
+        {
+          role: "Full-stack Developer",
+          company: "5DLA",
+          time: "09/2025 - Present",
+          location: "Ho Chi Minh City, Vietnam",
+          noBreak: true,
+          bullets: [
+            "<strong>Tech stacks: Shopify Liquid, JavaScript, Node.js, Webpack, jQuery, Bootstrap, GitHub Action.</strong>",
+            "Developed a Shopify e-commerce theme, supporting both B2C and B2B sales models, leveraging AI tools to accelerate development.",
+            "Implemented multi-language and currency support to enable internationalization and improved user experience.",
+            "Implemented tracking tools to support marketing performance monitoring and data insights.",
+            "Collaborated with stakeholders to deliver scalable storefront capabilities aligned with business and branding requirements.",
+            "Managed theme environments and deployments using Shopify CLI and GitHub Actions to automate workflows across development and production stores."
+          ]
+        },
+        {
+          role: "Senior Full-stack Developer 2",
+          company: "Globee Software & E-Commerce",
+          time: "06/2024 - 08/2025",
+          location: "Ho Chi Minh City, Vietnam",
+          noBreak: true,
+          bullets: [
+            "<strong>Tech stacks: TypeScript, JavaScript, Node.js, Webpack, jQuery, Bootstrap, SFCC, Jenkins, GitHub Action.</strong>",
+            "Delivered technical solutions for new functionalities, integrations, and bug fixes in Enhancement projects, while analyzing requirements to evaluate technical and business impacts.",
+            "Led a team of 5 developers to develop and successfully deliver Revamp projects across multiple brands and countries, new integration plugins for payment gateways (Stripe, AMEX, Cybersource, atone, Paynamics), OMS, and shipping services.",
+            "Implemented ESLint, Bitbucket pipelines for linter and code deployment automation.",
+            "Conducted code reviews, approved pull requests, implemented Webpack, set up Jenkins to build and deploy code to higher environments, including Development and Staging, for all SFRA projects.",
+            "Developed automation tools using Node.js to deploy configurations to higher and sandbox environments.",
+            "Collaborated with IT teams to merge forked pull requests and release code to Production.",
+            "Collaborated with CRM, regional, and local teams to design high-level system architecture.",
+            "Collaborated with PM, BA, QA, and external teams to define ticket's scope, timeline and break tasks.",
+            "Monitored systems to proactively detect, troubleshoot, and resolve issues, ensuring uninterrupted website operations and positive customer experiences.",
+            "Monitored post-release website performance and implemented enhancements to improve stability and user experience.",
+            "Implemented GitHub Actions workflows to monitor site uptime to take action immediately to downtime incidents."
+          ]
+        },
+        {
+          role: "Senior Full-stack Developer 1",
+          company: "Globee Software & E-Commerce",
+          time: "02/2023 - 06/2024",
+          location: "Ho Chi Minh City, Vietnam",
+          noBreak: true,
+          bullets: [
+            "<strong>Tech stacks: TypeScript, JavaScript, Node.js, Webpack, jQuery, Bootstrap, SFCC, Jenkins.</strong>",
+            "Provided technical solutions and contributed to development in the Revamp projects.",
+            "Designed and developed Page Designer themes and plugins from scratch to support features and system integrations.",
+            "Supported code review, ensuring alignment with architecture standards and coding conventions defined by Tech team.",
+            "Reviewed functional documentation, provided technical guidance, and mentored team members as needed.",
+            "Acted as Technical Architect for support and enhancement tasks."
+          ]
+        },
+        {
+          role: "Full-stack Developer",
+          company: "Globee Software & E-Commerce",
+          time: "08/2021 - 02/2023",
+          location: "Ho Chi Minh City, Vietnam",
+          noBreak: true,
+          bullets: [
+            "<strong>Tech stacks: JavaScript, Node.js, Webpack, jQuery, Bootstrap, SFCC, PHP, WordPress.</strong>",
+            "Worked as a main developer to develop E-Commerce sites across the APAC region.",
+            "Developed, maintained, and managed B2C E-commerce websites by working with Salesforce Commerce Cloud (SFCC) platform.",
+            "Integrated external systems: Order Management System, Payment Gateway, Loyalty System, Marketing System, Google Analytics, Google Tag Manager, Social Login.",
+            "Integrated the Google Maps API into the In-Store Availability feature and Shipping module.",
+            "Created and maintained unit test suites. Generated and evaluated test coverage reports.",
+            "Created and maintained technical documentation, including configuration, API guides, and release notes.",
+            "Set up campaigns, promotions, and landing pages.",
+            "Supported teammates and partners in system integration testing (SIT).",
+            "Used JIRA to manage tasks and communicate with teammates.",
+            "Utilized PHP, WordPress to revamp UI for the Kerry Consulting project."
+          ]
+        },
+        {
+          role: "Full-stack Developer",
+          company: "TECPRO Services Startup",
+          time: "08/2022 - 02/2023",
+          location: "Ho Chi Minh City, Vietnam",
+          noBreak: true,
+          bullets: [
+            "<strong>Tech stacks: JavaScript, Node.js, Webpack, jQuery, Bootstrap, PHP, Laravel, MySQL.</strong>",
+            "Utilized Laravel to develop an Education website, MySQL for data management, and C-Panel to manage and deploy the website to shared hosting.",
+            "Developed PHP packages following the PSR-4 standard and hosted them on Packagist."
+          ]
+        },
+        {
+          role: "Intern Full-stack Developer",
+          company: "Globee Software & E-Commerce",
+          time: "04/2021 - 07/2021",
+          location: "Ho Chi Minh City, Vietnam",
+          noBreak: true,
+          bullets: [
+            "<strong>Tech stacks: JavaScript, Node.js, Webpack, jQuery, Bootstrap, SFCC.</strong>",
+            "Learned about the development process, Salesforce Commerce Cloud, and the E-commerce business logic.",
+            "Maintained websites."
+          ]
+        }
+      ]
+    },
+    achievements: {
+      columns: [
+        [
+          {
+            label: "Checkout Experience Improvement",
+            desc: "Integrated Stripe, enhancing checkout experience and increasing payment success rate to 98%."
+          },
+          {
+            label: "UI Revamp & Revenue Growth",
+            desc: "Led the team in developing and launching a revamped UI across multiple sites, boosting revenue by 20%."
+          }
+        ],
+        [
+          {
+            label: "Successful Multiple System Integrations",
+            desc: "Led the development and launch of multiple integrations: Stripe, AMEX, Cybersource, Paynamics, OMS."
+          },
+          {
+            label: "Successful Site Launches",
+            desc: "Successfully launched 3 E-Commerce sites in 8 months."
+          }
+        ]
+      ]
+    },
+    softSkills: {
+      items: [
+        {
+          label: "Leadership",
+          list: "Lead the team through multiple enhancements, mentor interns and junior developers."
+        },
+        {
+          label: "Teamwork",
+          list: "Collaborate effectively with cross-functional teams to deliver high-quality solutions."
+        },
+        {
+          label: "Project Planning & Scheduling",
+          list: "Support in breaking requests into tasks, defining dependencies, and estimating time for each."
+        },
+        {
+          label: "Time Management",
+          list: "Work closely with PM and BA to prioritize tasks, avoid delays, and ensure tasks meet deadlines."
+        },
+        {
+          label: "Problem Solving",
+          list: "Troubleshoot and resolve issues effectively, ensuring the website runs smoothly without interruptions."
+        }
+      ]
+    },
+    education: {
+      items: [
+        {
+          major: "Bachelor's degree, Computer and Information Systems Security",
+          school: "Posts and Telecommunications Institute of Technology",
+          date: "08/2017 - 05/2022"
+        }
+      ]
+    },
+    certifications: {
+      items: [
+        {
+          name: "B2C Commerce Developer",
+          url: "https://drive.google.com/file/d/1qzE2BaTGQhIUYBl8-mZvrrYj1Yj9U_DB/view?usp=sharing",
+          company: "Salesforce"
+        },
+        {
+          name: "Google Analytics Certification",
+          url: "https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/160920049",
+          company: "Google Digital Academy (Skillshop)"
+        }
+      ]
+    },
+    projects: {
+      items: [
+        {
+          role: "5DLA",
+          time: "09/2025 - Present",
+          location: "Ho Chi Minh City, Vietnam",
+          url: "https://5dla.com/",
+          listTitle: "Summary",
+          noBreak: true,
+          bullets: [
+            "Partnered with a Hong Kong client to set up and develop a Shopify site, 5DLA - an e-commerce website distributing Denmark's FUSION sportswear brand across 7 APAC markets (HK, MY, AU, PH, SG, TH, VN).",
+            "Built features to support both B2C and B2B storefront capabilities, enabling direct consumer sales and business customer ordering."
+          ]
+        },
+        {
+          role: "Samsonite",
+          time: "04/2021 - 08/2025",
+          location: "Ho Chi Minh City, Vietnam",
+          listTitle: "Summary",
+          noBreak: true,
+          bullets: [
+            "Developed, maintained, and operated 23 e-commerce websites across the APAC region for global luggage and travel accessories brands, including Samsonite, American Tourister, and Lipault.",
+            "Managed storefront and customer data, including product catalogs, pricing, promotions, and CRM integrations, to ensure seamless customer journeys across browsing, checkout, and post-purchase experiences."
+          ]
+        },
+        {
+          role: "Kerry Consulting",
+          time: "06/2023 - 08/2023",
+          location: "Ho Chi Minh City, Vietnam",
+          url: "https://kerryconsulting.com/",
+          listTitle: "Summary",
+          noBreak: true,
+          bullets: [
+            "Revamped the website theme, improving layout, responsiveness, and overall user experience.",
+            "Enhanced an existing WordPress plugin by implementing a new filtering feature to improve content discoverability.",
+            "Performed data migration and transformation, merging new datasets with existing data to support the new filter functionality while ensuring data integrity."
+          ]
+        },
+        {
+          role: "Dien Quang Landing Page",
+          time: "01/2021 - 03/2021",
+          location: "Ho Chi Minh City, Vietnam",
+          url: "https://welcome.dienquang.com",
+          listTitle: "Summary",
+          noBreak: true,
+          bullets: [
+            "Utilized HTML, CSS, JavaScript, and jQuery to develop the landing page UI.",
+            "Utilized PHP and MySQL to develop a CRUD application to manage the landing page content."
+          ]
+        }
+      ]
+    }
+  };
+
+  // page.js
+  function log(...args) {
+    console.log("[Paginator]", ...args);
+  }
+  function calcHeight(element) {
+    if (!element) return 0;
+    const styles = window.getComputedStyle(element);
+    const marginTop = parseFloat(styles.marginTop) || 0;
+    const marginBottom = parseFloat(styles.marginBottom) || 0;
+    return element.offsetHeight + marginTop + marginBottom;
+  }
+  var Page = class {
+    constructor(config) {
+      this.config = config;
+      this.noBreakSelector = config.noBreakElementClass;
+      this.dividerHeight = 26;
+      this.reset();
+    }
+    reset() {
+      this.pages = [];
+      this.currentPage = null;
+      this.currentHeight = 0;
+      this.tempSection = null;
+    }
+    paginate(contentEl) {
+      this.reset();
+      this.startNewPage();
+      const sections = Array.from(contentEl.children);
+      for (const section of sections) {
+        if (this.hasNoBreakItems(section)) {
+          this.addNoBreakSection(section);
+          continue;
+        }
+        this.addWholeSection(section);
+      }
+      this.pages.push(this.currentPage);
+      return this.pages;
+    }
+    createPageElement() {
+      const page = document.createElement("div");
+      page.className = "page";
+      page.style.width = `${this.config.maxWidth}px`;
+      page.style.height = `${this.config.maxHeight}px`;
+      page.style.padding = `${this.config.paddingTop}px ${this.config.paddingBottom}px`;
+      return page;
+    }
+    createDivider() {
+      const divider = document.createElement("div");
+      divider.classList.add("divider");
+      return divider;
+    }
+    startNewPage() {
+      this.currentPage = this.createPageElement();
+      this.currentHeight = 0;
+    }
+    exceedsUsable(height) {
+      return height > this.config.usable;
+    }
+    hasNoBreakItems(section) {
+      return Boolean(section.querySelector(this.noBreakSelector));
+    }
+    addWholeSection(section) {
+      const sectionHeight = calcHeight(section);
+      log(section, "section height:", sectionHeight);
+      if (this.exceedsUsable(this.currentHeight + sectionHeight)) {
+        this.pages.push(this.currentPage);
+        this.startNewPage();
+      }
+      this.currentPage.appendChild(section.cloneNode(true));
+      this.currentHeight += sectionHeight;
+    }
+    createTempSection(section) {
+      const title = section.querySelector(".section-title");
+      this.tempSection = section.cloneNode(false);
+      if (title) this.tempSection.appendChild(title.cloneNode(true));
+    }
+    addNoBreakSection(section) {
+      const items = Array.from(section.querySelectorAll(this.noBreakSelector));
+      this.createTempSection(section);
+      for (let idx = 0; idx < items.length; idx++) {
+        const item = items[idx];
+        this.addNoBreakItem(section, item, idx, items);
+      }
+      if (this.tempSection.children.length > 0) {
+        this.currentPage.appendChild(this.tempSection);
+      }
+    }
+    addNoBreakItem(section, item, idx, items) {
+      const itemHeight = calcHeight(item);
+      const divider = this.createDivider();
+      const itemWithDivider = itemHeight + this.dividerHeight;
+      if (this.exceedsUsable(this.currentHeight + itemWithDivider)) {
+        if (this.tempSection.children.length > 0) {
+          this.currentPage.appendChild(this.tempSection);
+        }
+        this.pages.push(this.currentPage);
+        this.startNewPage();
+        this.createTempSection(section);
+      }
+      this.tempSection.appendChild(item.cloneNode(true));
+      this.tempSection.appendChild(divider);
+      this.currentHeight += itemWithDivider;
+      log(item, "item height:", itemWithDivider, "after adding, current height:", this.currentHeight);
+      const nextItem = items[idx + 1];
+      const isLastItem = idx === items.length - 1;
+      const nextItemHeight = calcHeight(nextItem);
+      const shouldRemoveDivider = this.exceedsUsable(
+        this.currentHeight + nextItemHeight + this.dividerHeight
+      ) || isLastItem;
+      if (shouldRemoveDivider) {
+        this.tempSection.removeChild(divider);
+      }
+    }
+  };
+  var Printer = class {
+    constructor(config) {
+      this.config = config;
+      this.printBtn = null;
+      this.borderBtn = null;
+      this.showBorders = Boolean(config.enableBorderButton);
+    }
+    mount() {
+      if (typeof document === "undefined") return;
+      if (this.config.enablePrintButton) {
+        this.printBtn = this.createPrintButton();
+      }
+      if (this.config.enableBorderButton) {
+        this.borderBtn = this.createBorderButton();
+        this.applyBorders(true);
+      }
+    }
+    getPageElements() {
+      return Array.from(document.querySelectorAll(".page"));
+    }
+    applyBorders(enabled) {
+      const pages = this.getPageElements();
+      if (enabled) {
+        pages.forEach((page) => {
+          page.classList.add("has-border");
+        });
+      } else {
+        pages.forEach((page) => {
+          page.classList.remove("has-border");
+        });
+      }
+      this.showBorders = enabled;
+    }
+    createBaseButton(className, text, styles) {
+      const existing = document.querySelector(`.${className}`);
+      if (existing) return existing;
+      const button = document.createElement("button");
+      button.className = className;
+      button.type = "button";
+      button.textContent = text;
+      Object.assign(button.style, {
+        position: "fixed",
+        zIndex: "99999",
+        padding: "10px 14px",
+        background: "#0078d4",
+        color: "#fff",
+        border: "none",
+        borderRadius: "6px",
+        boxShadow: "0 2px 6px rgba(0,0,0,0.2)",
+        cursor: "pointer",
+        fontSize: "14px",
+        display: "block",
+        ...styles
+      });
+      document.body.appendChild(button);
+      return button;
+    }
+    createPrintButton() {
+      const button = this.createBaseButton("paginator-print-btn", "Print", {
+        right: "16px",
+        bottom: "16px"
+      });
+      button.addEventListener("click", () => {
+        this.handlePrint(button);
+      });
+      return button;
+    }
+    createBorderButton() {
+      const button = this.createBaseButton("paginator-border-btn", "Hide Borders", {
+        right: "16px",
+        bottom: "64px",
+        background: "#444"
+      });
+      button.addEventListener("click", () => {
+        this.applyBorders(!this.showBorders);
+        button.textContent = this.showBorders ? "Hide Borders" : "Show Borders";
+      });
+      return button;
+    }
+    handlePrint(triggerBtn) {
+      const pages = this.getPageElements();
+      triggerBtn.style.display = "none";
+      if (this.borderBtn) this.borderBtn.style.display = "none";
+      if (!pages.length) {
+        window.print();
+        this.restoreButtons(triggerBtn);
+        return;
+      }
+      const prevBorders = pages.map((page) => page.style.border);
+      pages.forEach((page) => {
+        page.style.border = "none";
+      });
+      let fallbackTimer = null;
+      const restore = () => {
+        if (fallbackTimer) {
+          clearTimeout(fallbackTimer);
+          fallbackTimer = null;
+        }
+        pages.forEach((page, idx) => {
+          page.style.border = prevBorders[idx] || "";
+        });
+        window.removeEventListener("afterprint", restore);
+        window.removeEventListener("keyup", escHandler);
+        this.restoreButtons(triggerBtn);
+      };
+      const escHandler = (event) => {
+        if (event.key === "Escape") restore();
+      };
+      window.addEventListener("afterprint", restore);
+      window.addEventListener("keyup", escHandler);
+      fallbackTimer = setTimeout(() => {
+        restore();
+      }, 3e3);
+      window.print();
+    }
+    restoreButtons(triggerBtn) {
+      triggerBtn.style.display = "block";
+      if (this.borderBtn) this.borderBtn.style.display = "block";
+    }
+  };
+  var Paginator = class _Paginator {
+    constructor(config) {
+      this.config = this.initCfg(config);
+      this.page = new Page(this.config);
+      this.printer = new Printer(this.config);
+      log("config:", this.config);
+    }
+    initCfg(config) {
+      const defaultCfg = {
+        maxHeight: 1330,
+        maxWidth: 940,
+        paddingTop: 60,
+        paddingBottom: 60,
+        noBreakElementClass: ".no-break",
+        enablePrintButton: true,
+        enableBorderButton: true
+      };
+      const mergedCfg = { ...defaultCfg, ...config };
+      return {
+        ...mergedCfg,
+        usable: mergedCfg.maxHeight - mergedCfg.paddingTop - mergedCfg.paddingBottom - 20
+      };
+    }
+    paginate(contentEl) {
+      return this.page.paginate(contentEl);
+    }
+    render(contentWrapperClass) {
+      const wrapper = document.querySelector(contentWrapperClass);
+      if (!wrapper) {
+        throw new Error(`Content wrapper with class "${contentWrapperClass}" not found.`);
+      }
+      const root = wrapper.parentElement;
+      const pages = this.paginate(wrapper);
+      log("Paginator: Created", pages.length, "pages.");
+      root.removeChild(wrapper);
+      root.style.display = "block";
+      pages.forEach((page) => root.appendChild(page));
+      this.printer.mount();
+    }
+    static run(config, contentWrapperClass) {
+      const paginator = new _Paginator(config);
+      paginator.render(contentWrapperClass);
+    }
+  };
+
+  // main.js
   var sectionOrder = [
     "personal",
     "profile",
@@ -5711,7 +6281,7 @@
   var templateIdFor = (section) => `tpl-${section}`;
   var renderSection = (section, data, target) => {
     const templateEl = document.getElementById(templateIdFor(section));
-    if (!templateEl) {
+    if (!templateEl || !data) {
       return;
     }
     const template = import_handlebars.default.compile(templateEl.innerHTML);
@@ -5722,20 +6292,14 @@
       target.appendChild(wrapper.firstElementChild);
     }
   };
-  var init = async () => {
-    const response = await fetch("./data.json");
-    if (!response.ok) {
-      throw new Error(`Failed to load data.json: ${response.status}`);
-    }
-    const data = await response.json();
+  var init = () => {
     const page = document.getElementById("page") || document.getElementById("root");
     sectionOrder.forEach((section) => {
-      renderSection(section, data[section], page);
+      renderSection(section, data_default[section], page);
     });
+    setTimeout(() => {
+      Paginator.run({}, ".page");
+    }, 1);
   };
-  document.addEventListener("DOMContentLoaded", () => {
-    init().catch((error) => {
-      console.error(error);
-    });
-  });
+  document.addEventListener("DOMContentLoaded", init);
 })();

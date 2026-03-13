@@ -1,4 +1,8 @@
-﻿import Handlebars from "handlebars";
+﻿"use strict";
+
+import Handlebars from "handlebars";
+import data from "./data.json" with { type: "json" };
+import { Paginator } from "./page";
 
 const sectionOrder = [
   "personal",
@@ -16,7 +20,7 @@ const templateIdFor = (section) => `tpl-${section}`;
 
 const renderSection = (section, data, target) => {
   const templateEl = document.getElementById(templateIdFor(section));
-  if (!templateEl) {
+  if (!templateEl || !data) {
     return;
   }
   const template = Handlebars.compile(templateEl.innerHTML);
@@ -29,21 +33,16 @@ const renderSection = (section, data, target) => {
   }
 };
 
-const init = async () => {
-  const response = await fetch("./data.json");
-  if (!response.ok) {
-    throw new Error(`Failed to load data.json: ${response.status}`);
-  }
-  const data = await response.json();
+const init = () => {
   const page = document.getElementById("page") || document.getElementById("root");
 
   sectionOrder.forEach((section) => {
     renderSection(section, data[section], page);
   });
+
+  setTimeout(() => {
+    Paginator.run({}, ".page");
+  }, 1);
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-  init().catch((error) => {
-    console.error(error);
-  });
-});
+document.addEventListener("DOMContentLoaded", init);
