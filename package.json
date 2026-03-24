@@ -15,6 +15,14 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "build": "esbuild main.js --bundle --outfile=dist/main.js"
+    "build": "esbuild main.js --bundle --outfile=dist/main.js",
+    "build:cveditor": "esbuild coverletter/editor.js --bundle --outfile=coverletter/dist/editor.js && npx esbuild --bundle coverletter/editor.css --outfile=coverletter/dist/editor.css"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "quill": "^2.0.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.4"
   }
 }
