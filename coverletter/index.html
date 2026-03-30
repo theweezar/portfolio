@@ -24,20 +24,32 @@
         </div>
       </form>
 
-      <div class="editor-wrapper">
-        <label for="editor">Editor</label>
-        <div id="editor"></div>
+      <div class="wrapper">
+        <div class="switch-wrapper">
+          <label class="switch">
+            <input type="checkbox" name="boxSwitch" id="boxSwitch">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="editor-wrapper switch-item editor" style="display: block;">
+          <label for="editor">Editor</label>
+          <div id="editor"></div>
+        </div>
+
+        <div class="content-wrapper switch-item content" style="display: none;">
+          <label for="content">Content</label>
+          <div id="content"></div>
+        </div>
       </div>
 
-      <div class="content-wrapper">
-        <label for="content">Content</label>
-        <div id="content"></div>
-      </div>
-
-      <div class="action">
-        <button type="button" id="copyBtn">Copy Content</button>
+      <div class="action editor" id="action">
+        <button type="button" id="saveTemplate" data-of="#editor">Save Template</button>
+        <button type="button" id="copyBtn" data-of="#content">Copy Content</button>
         <div class="notification" id="notification">Copied to clipboard!</div>
       </div>
+
+      
     </div>
   </div>
 </body>

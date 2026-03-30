@@ -22,7 +22,7 @@ body {
 .container {
   max-width: 600px;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   background-color: white;
   padding: 30px;
 }
@@ -85,8 +85,84 @@ button#copyBtn {
 }
 
 .content-wrapper {
-  padding: 12px;
   font-size: 14px;
-  border: 1px solid #ccc;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.action button {
+  margin-bottom: 0.5rem;
+}
+
+.action.editor [data-of="#content"],
+.action.content [data-of="#editor"] {
+  display: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.switch-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* The container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  /* Perfect round corners */
+  border-radius: 34px;
+}
+
+/* The inner circle (the "knob") */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11px;
+  width: 11px;
+  left: 4px;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: white;
+  transition: .4s;
+  /* Perfect round corners */
+  border-radius: 50%;
+}
+
+/* Background color when checked */
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+/* Move the circle when checked */
+input:checked+.slider:before {
+  transform: translate(11px, -50%);
 }

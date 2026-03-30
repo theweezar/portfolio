@@ -19,6 +19,7 @@
     "build:cveditor": "esbuild coverletter/editor.js --bundle --outfile=coverletter/dist/editor.js && npx esbuild --bundle coverletter/editor.css --outfile=coverletter/dist/editor.css"
   },
   "dependencies": {
+    "express": "^5.2.1",
     "handlebars": "^4.7.8",
     "quill": "^2.0.3"
   },

@@ -17348,7 +17348,7 @@ ${escapeText(this.code(index, length))}
       }, timeout);
     };
   }
-  function load() {
+  function loadStoredContent() {
     try {
       const quillContent = localStorage.getItem(LOCAL_KEY);
       const contentJson = JSON.parse(quillContent);
@@ -17404,9 +17404,27 @@ ${escapeText(this.code(index, length))}
       alert("Failed to copy to clipboard");
     });
   }
+  function initController() {
+    document.getElementById("boxSwitch").addEventListener("change", (event) => {
+      const target = event.target;
+      const switchTo = (token) => {
+        document.querySelectorAll(".switch-item").forEach((el) => el.style.display = "none");
+        document.querySelector(`.switch-item.${token}`).style.display = "block";
+        const action = document.getElementById("action");
+        action.classList.remove(...String(action.classList.value).split(" "));
+        action.classList.add(...["action", token]);
+      };
+      if (target.checked) {
+        switchTo("content");
+      } else {
+        switchTo("editor");
+      }
+    });
+  }
   (function() {
     initQuillEvents();
-    load();
+    loadStoredContent();
+    initController();
     document.getElementById("copyBtn").addEventListener("click", copyToClipboard);
   })();
 })();
