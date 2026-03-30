@@ -2619,21 +2619,125 @@ body {
     Geneva,
     Verdana,
     sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f3f4f6;
   padding: 0;
   margin: 0;
 }
-.flex-wrapper {
-  display: flex;
-  height: 100vh;
+button,
+input {
+  font: inherit;
+}
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      180deg,
+      #eef2ff 0%,
+      #f8fafc 35%,
+      #f3f4f6 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+.template-sidebar {
+  width: 300px;
+  max-width: calc(100vw - 1.5rem);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: #ffffff;
+  overflow-y: auto;
+  border-left: 1px solid #d9dee8;
+  box-shadow: -18px 0 45px rgba(15, 23, 42, 0.14);
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+}
+.app-shell.sidebar-open .template-sidebar {
+  transform: translateX(0);
+}
+.template-sidebar-header {
+  padding: 1.25rem 1.25rem;
+  border-bottom: 1px solid #eef2f7;
+  position: relative;
+}
+.template-sidebar #sidebarClose {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 1.25rem;
+  width: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #111827;
+  font-size: 16px;
+}
+.template-sidebar-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: #111827;
+}
+.template-sidebar-body {
   padding: 1rem;
 }
+.template-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+.template-list button {
+  width: 100%;
+  text-align: left;
+  background: #f8fafc;
+  color: #111827;
+  border: 1px solid #d9dee8;
+  border-radius: 12px;
+  padding: 0.85rem 0.95rem;
+}
+.template-list button:hover,
+.template-list button.is-active {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+.template-empty {
+  display: none;
+  padding: 0.85rem 0.95rem;
+  border: 1px dashed #cbd5e1;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+.main-panel {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 1rem;
+}
 .container {
-  max-width: 600px;
+  max-width: 760px;
   width: 100%;
   margin: 0 auto;
   background-color: white;
   padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+.template-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.sidebar-toggle {
+  width: auto;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
 }
 .form-group {
   margin-bottom: 1rem;
@@ -2650,25 +2754,28 @@ input {
   padding: 12px;
   border: 1px solid #ccc;
   font-size: 14px;
-  transition: border-color 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 12px;
 }
 input:focus {
   outline: none;
   border-color: #333;
+  box-shadow: 0 0 0 4px rgba(17, 24, 39, 0.08);
 }
 button {
   width: 100%;
   padding: 12px;
-  background-color: #333;
+  background-color: #111827;
   color: white;
   border: none;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.2s;
+  border-radius: 12px;
 }
 button:hover {
-  background-color: #555;
+  background-color: #1f2937;
 }
 .notification {
   display: none;
@@ -2678,6 +2785,7 @@ button:hover {
   border: 1px solid #c3e6cb;
   text-align: center;
   font-size: 14px;
+  border-radius: 12px;
 }
 .editor-wrapper,
 .content-wrapper,
@@ -2696,6 +2804,7 @@ button#copyBtn {
 #content {
   padding: 12px;
   border: 1px solid #ccc;
+  border-radius: 12px;
 }
 .action button {
   margin-bottom: 0.5rem;
@@ -2726,10 +2835,7 @@ button#copyBtn {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: #ccc;
   transition: .4s;
   border-radius: 34px;
@@ -2747,10 +2853,22 @@ button#copyBtn {
   border-radius: 50%;
 }
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2563eb;
 }
 input:checked + .slider:before {
   transform: translate(11px, -50%);
+}
+@media (max-width: 900px) {
+  .template-sidebar {
+    width: min(300px, calc(100vw - 1rem));
+  }
+  .container {
+    padding: 20px;
+    border-radius: 0;
+  }
+  .main-panel {
+    padding-top: 0;
+  }
 }
 /*! Bundled license information:
 

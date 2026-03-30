@@ -10,47 +10,74 @@
 </head>
 
 <body>
-  <div class="flex-wrapper">
-    <div class="container">
-      <form id="replacementForm">
-        <div class="form-group">
-          <label for="company">Company</label>
-          <input autocomplete="off" type="text" id="company" placeholder="Enter company name" required>
+  <div class="app-shell" id="appShell">
+    <div class="main-panel">
+      <div class="container">
+        <form id="replacementForm">
+          <div class="template-toolbar">
+            <button type="button" class="sidebar-toggle sidebar-toggle-btn" id="sidebarToggle" aria-controls="templateSidebar"
+              aria-expanded="false">
+              Templates
+            </button>
+          </div>
+
+          <div class="form-group">
+            <label for="templateTitle">Template Title</label>
+            <input autocomplete="off" type="text" id="templateTitle" name="templateTitle"
+              placeholder="Enter template title" required>
+          </div>
+
+          <input type="hidden" id="templateJSON" name="templateJSON">
+          <input type="hidden" id="templateID" name="templateID">
+
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input autocomplete="off" type="text" id="company" placeholder="Enter company name">
+          </div>
+
+          <div class="form-group">
+            <label for="role">Role</label>
+            <input autocomplete="off" type="text" id="role" placeholder="Enter job role">
+          </div>
+        </form>
+
+        <div class="wrapper">
+          <div class="switch-wrapper">
+            <label class="switch">
+              <input type="checkbox" name="boxSwitch" id="boxSwitch">
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <div class="editor-wrapper switch-item editor" style="display: block;">
+            <label for="editor">Editor</label>
+            <div id="editor"></div>
+          </div>
+
+          <div class="content-wrapper switch-item content" style="display: none;">
+            <label for="content">Content</label>
+            <div id="content"></div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="role">Role</label>
-          <input autocomplete="off" type="text" id="role" placeholder="Enter job role" required>
-        </div>
-      </form>
-
-      <div class="wrapper">
-        <div class="switch-wrapper">
-          <label class="switch">
-            <input type="checkbox" name="boxSwitch" id="boxSwitch">
-            <span class="slider"></span>
-          </label>
-        </div>
-
-        <div class="editor-wrapper switch-item editor" style="display: block;">
-          <label for="editor">Editor</label>
-          <div id="editor"></div>
-        </div>
-
-        <div class="content-wrapper switch-item content" style="display: none;">
-          <label for="content">Content</label>
-          <div id="content"></div>
+        <div class="action editor" id="action">
+          <button type="submit" id="saveTemplate" form="replacementForm" data-of="#editor">Save Template</button>
+          <button type="button" id="copyBtn" data-of="#content">Copy Content</button>
+          <div class="notification" id="notification">Copied to clipboard!</div>
         </div>
       </div>
-
-      <div class="action editor" id="action">
-        <button type="button" id="saveTemplate" data-of="#editor">Save Template</button>
-        <button type="button" id="copyBtn" data-of="#content">Copy Content</button>
-        <div class="notification" id="notification">Copied to clipboard!</div>
-      </div>
-
-      
     </div>
+
+    <aside class="template-sidebar" id="templateSidebar" aria-hidden="true">
+      <div class="template-sidebar-header">
+        <h2>Templates</h2>
+        <button id="sidebarClose" class="sidebar-toggle-btn">&#10006;</button>
+      </div>
+      <div class="template-sidebar-body">
+        <div class="template-empty" id="templateEmpty">No templates saved yet.</div>
+        <ul class="template-list" id="templateList"></ul>
+      </div>
+    </aside>
   </div>
 </body>
 

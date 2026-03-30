@@ -1,0 +1,105 @@
+[
+  {
+    "templateID": "1164b810-b980-4ef5-a385-3926fc2269a2",
+    "templateTitle": "Template TopCV",
+    "templateJSON": {
+      "ops": [
+        {
+          "insert": "Kính gửi Bộ phận Tuyển dụng "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "{{company}}"
+        },
+        {
+          "insert": ",\n\nTôi được biết quý Công ty đang có nhu cầu tuyển dụng vị trí "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "{{role}} "
+        },
+        {
+          "insert": "qua TopCV.\n\nTôi có khoảng 5 năm làm việc ở vị trí Full-Stack Developer, sử dụng "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "TypeScript, JavaScript, Node.js và PHP"
+        },
+        {
+          "insert": " để phát triển hệ thống website thương mại điện tử (B2C) ở các nước trong khu vực châu Á - Thái Bình Dương trên hai nền tảng chính: "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "Salesforce Commerce Cloud "
+        },
+        {
+          "insert": "và "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "Shopify"
+        },
+        {
+          "insert": ". Dự án gồm có: Samsonite, American Tourister, TUMI, Lipault.\n\nCông việc tôi đã làm gồm có: vận hành, duy trì, phát triển giao diện và tích hợp các luồng back-end bao gồm: OMS, Payment, Tracking, Marketing và Loyalty cho 23 site cửa hàng online và offline.\n\nTôi tin rằng kinh nghiệm của tôi có thể đóng góp giá trị thực tế cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn quý Công ty đã dành thời gian xem xét hồ sơ của tôi.\n\nTrân trọng,\nHoàng Phan Minh Đức\n"
+        }
+      ]
+    }
+  },
+  {
+    "templateID": "f8c9a029-e869-4f5c-a6da-520b3773d027",
+    "templateTitle": "Template ITViec",
+    "templateJSON": {
+      "ops": [
+        {
+          "insert": "Kính gửi Phòng Nhân Sự "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "{{company}}"
+        },
+        {
+          "insert": ",\n\nTôi xin ứng tuyển vào vị trí "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "{{role}}"
+        },
+        {
+          "insert": ".\nTôi đã tốt nghiệp năm 2022, ngành An toàn thông tin, tại HVCN Bưu chính Viễn thông, có 5 năm làm việc ở vị trí "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "FULLSTACK DEVELOPER"
+        },
+        {
+          "insert": ", sử dụng "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "JavaScript, Node.js và PHP"
+        },
+        {
+          "insert": " để phát triển hệ thống website trong lĩnh vực thương mại điện tử.\n\nTôi tin rằng tôi có thể đóng góp giá trị cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn.\n\nTrân trọng.\n"
+        }
+      ]
+    }
+  }
+]
