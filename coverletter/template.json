@@ -1,7 +1,7 @@
 [
   {
     "templateID": "1164b810-b980-4ef5-a385-3926fc2269a2",
-    "templateTitle": "Template TopCV",
+    "templateTitle": "Template FULL",
     "templateJSON": {
       "ops": [
         {
@@ -50,7 +50,7 @@
           "insert": "Shopify"
         },
         {
-          "insert": ". Dự án gồm có: Samsonite, American Tourister, TUMI, Lipault.\n\nCông việc tôi đã làm gồm có: vận hành, duy trì, phát triển giao diện và tích hợp các luồng back-end bao gồm: OMS, Payment, Tracking, Marketing và Loyalty cho 23 site cửa hàng online và offline.\n\nTôi tin rằng kinh nghiệm của tôi có thể đóng góp giá trị thực tế cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn quý Công ty đã dành thời gian xem xét hồ sơ của tôi.\n\nTrân trọng,\nHoàng Phan Minh Đức\n"
+          "insert": ". Dự án gồm có: Samsonite, American Tourister, TUMI, Lipault.\n\nCông việc tôi đã làm gồm có: vận hành, duy trì, phát triển, tối ưu giao diện; tích hợp các dịch vụ bao gồm: OMS, Payment, Tracking, Marketing và Loyalty; hỗ trợ SIT và UAT; triển khai các tính năng và chủ động giám sát, khắc phục sự cố trên môi trường PRODUCTION.\n\nHiện tại, tôi đang tìm kiếm một môi trường mới để được tiếp cận sâu hơn với kiến trúc hệ thống, nên tôi xin được ứng tuyển vào vị trí này. Tôi tin rằng kinh nghiệm của tôi có thể đóng góp giá trị thực tế cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn quý Công ty đã dành thời gian xem xét hồ sơ của tôi.\n\nTrân trọng,\nHoàng Phan Minh Đức\n"
         }
       ]
     }
@@ -61,43 +61,74 @@
     "templateJSON": {
       "ops": [
         {
-          "insert": "Kính gửi Phòng Nhân Sự "
+          "insert": "Tôi có khoảng 5 năm làm việc ở vị trí Full-Stack Developer, sử dụng "
         },
         {
           "attributes": {
             "bold": true
           },
-          "insert": "{{company}}"
+          "insert": "TypeScript, JavaScript, Node.js, PHP"
         },
         {
-          "insert": ",\n\nTôi xin ứng tuyển vào vị trí "
-        },
+          "insert": " để phát triển hệ thống website TMĐT (B2C) trong khu vực châu Á - Thái Bình Dương. Dự án gồm có: Samsonite, American Tourister, TUMI, Lipault.\n\nCông việc tôi đã làm gồm có: vận hành, duy trì, phát triển, tối ưu giao diện; tích hợp các dịch vụ bên thứ ba; hỗ trợ SIT và UAT; triển khai các tính năng và chủ động giám sát, khắc phục sự cố trên môi trường PRODUCTION.\n\nXin cảm ơn.\n\nTrân trọng.\n"
+        }
+      ]
+    }
+  },
+  {
+    "templateID": "7d08926d-e7d6-4539-96ec-f42cab7329f1",
+    "templateTitle": "Template No Greeting",
+    "templateJSON": {
+      "ops": [
         {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "{{role}}"
-        },
-        {
-          "insert": ".\nTôi đã tốt nghiệp năm 2022, ngành An toàn thông tin, tại HVCN Bưu chính Viễn thông, có 5 năm làm việc ở vị trí "
-        },
-        {
-          "attributes": {
-            "bold": true
-          },
-          "insert": "FULLSTACK DEVELOPER"
-        },
-        {
-          "insert": ", sử dụng "
+          "insert": "Tôi có khoảng 5 năm làm việc ở vị trí Full-Stack Developer, sử dụng "
         },
         {
           "attributes": {
             "bold": true
           },
-          "insert": "JavaScript, Node.js và PHP"
+          "insert": "TypeScript, JavaScript, Node.js và PHP"
         },
         {
-          "insert": " để phát triển hệ thống website trong lĩnh vực thương mại điện tử.\n\nTôi tin rằng tôi có thể đóng góp giá trị cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn.\n\nTrân trọng.\n"
+          "insert": " để phát triển hệ thống website TMĐT (B2C) ở các nước trong khu vực châu Á - Thái Bình Dương trên hai nền tảng chính: "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "Salesforce Commerce Cloud "
+        },
+        {
+          "insert": "và "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "Shopify"
+        },
+        {
+          "insert": ". Dự án gồm có: Samsonite, American Tourister, TUMI, Lipault.\n\nCông việc tôi đã làm gồm có: vận hành, duy trì, phát triển, tối ưu giao diện; tích hợp các dịch vụ bao gồm: OMS, Payment, Tracking, Marketing và Loyalty; hỗ trợ SIT và UAT; triển khai các tính năng và chủ động giám sát, khắc phục sự cố trên môi trường PRODUCTION.\n\nHiện tại, tôi đang tìm kiếm một môi trường mới để được tiếp cận sâu hơn với kiến trúc hệ thống, nên tôi xin được ứng tuyển vào vị trí này. Tôi tin rằng kinh nghiệm của tôi có thể đóng góp giá trị thực tế cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn quý Công ty đã dành thời gian xem xét hồ sơ của tôi.\n\nTrân trọng.\n"
+        }
+      ]
+    }
+  },
+  {
+    "templateID": "a15c5b21-a1cf-4bad-bda1-765ecd1f1d79",
+    "templateTitle": "Template Glints",
+    "templateJSON": {
+      "ops": [
+        {
+          "insert": "Tôi có khoảng 5 năm làm việc ở vị trí Full-Stack Developer, sử dụng "
+        },
+        {
+          "attributes": {
+            "bold": true
+          },
+          "insert": "TypeScript, JavaScript, Node.js và PHP"
+        },
+        {
+          "insert": " để phát triển hệ thống website TMĐT (B2C) ở các nước trong khu vực châu Á - Thái Bình Dương. Dự án: Samsonite, American Tourister, TUMI, Lipault.\n\nCông việc tôi đã làm gồm có: vận hành, duy trì, phát triển, tối ưu giao diện; tích hợp các dịch vụ bao gồm: OMS, Payment, Tracking, Marketing và Loyalty; hỗ trợ SIT và UAT; triển khai các tính năng và chủ động giám sát, khắc phục sự cố trên môi trường PRODUCTION.\n\nHiện tại, tôi đang tìm kiếm một môi trường mới để được tiếp cận sâu hơn với kiến trúc hệ thống, nên tôi xin được ứng tuyển vào vị trí này. Tôi tin rằng kinh nghiệm của tôi có thể đóng góp giá trị thực tế cho công ty, đồng thời cũng sẽ giúp tôi phát triển đúng định hướng dài hạn của mình.\n\nXin chân thành cảm ơn quý Công ty đã dành thời gian xem xét hồ sơ của tôi.\n\nTrân trọng.\n"
         }
       ]
     }

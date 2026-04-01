@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
   background-color: #f3f4f6;
   padding: 0;
   margin: 0;
@@ -203,7 +203,7 @@ button#copyBtn {
 
 .content-wrapper {
   font-size: 14px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 #content {
@@ -234,8 +234,9 @@ button#copyBtn {
 .switch {
   position: relative;
   display: inline-block;
-  width: 30px;
-  height: 17px;
+  width: 2rem;
+  height: 1rem;
+  margin: 0;
 }
 
 .switch input {
@@ -256,9 +257,9 @@ button#copyBtn {
 .slider:before {
   position: absolute;
   content: "";
-  height: 11px;
-  width: 11px;
-  left: 4px;
+  height: calc(1rem / 1.5);
+  width: calc(1rem / 1.5);
+  left: 3px;
   top: 50%;
   transform: translate(0, -50%);
   background-color: white;
@@ -271,7 +272,7 @@ input:checked+.slider {
 }
 
 input:checked+.slider:before {
-  transform: translate(11px, -50%);
+  transform: translate(15.34px, -50%);
 }
 
 @media (max-width: 900px) {
